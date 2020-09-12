@@ -1,11 +1,13 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import shopifyLogo from "../images/shopify-logo.svg"
+import gatsbyLogo from "../images/gatsby-logo.svg"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
+      background: `#ccc`,
       marginBottom: `1.45rem`,
     }}
   >
@@ -21,10 +23,22 @@ const Header = ({ siteTitle }) => (
           to="/"
           style={{
             color: `white`,
+            display: `flex`,
+            alignItems: `center`,
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <img
+            src={shopifyLogo}
+            alt="Shopify"
+            style={{ maxWidth: 200, marginBottom: 0 }}
+          />
+          <span style={{ padding: `0 10px` }}>+</span>
+          <img
+            src={gatsbyLogo}
+            alt="Gatsby"
+            style={{ maxWidth: 200, marginBottom: 0 }}
+          />
         </Link>
       </h1>
     </div>
